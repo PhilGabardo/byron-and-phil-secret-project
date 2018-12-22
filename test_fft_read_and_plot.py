@@ -13,7 +13,10 @@ import math
 # sine wave
 #y = np.sin(2 * np.pi * f * t)
 from scipy.io import wavfile
-Fs, y = wavfile.read('./wav_samples/Yamaha-V50-Synbass-1-C2.wav')
+Fs, y = wavfile.read('./wav_samples/sample2.wav')
+
+
+#y = [(sample[0] + sample[1])/2 for sample in y]
 
 Ts = 1.0/Fs
 t = np.arange(0,len(y)*Ts,Ts)
